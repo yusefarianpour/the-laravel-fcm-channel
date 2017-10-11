@@ -1,6 +1,8 @@
 {
     "name": "yusefarianpour/the-laravel-fcm-channel",
     "description": "The Laravel FCM Channel",
+    "license": "MIT",
+    "type": "project",
     "authors": [
       {
         "name": "Yusef Arianpour",
