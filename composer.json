@@ -1,0 +1,19 @@
+{
+  "name": "yusefarianpour/the-laravel-fcm-channel",
+  "description": "The Laravel FCM Channel",
+  "authors": [
+    {
+      "name": "Yusef Arianpour",
+      "email": "info@asign.ir"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Atio\\TheChannel\\": "src/"
+    }
+  }
+}
