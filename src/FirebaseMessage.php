@@ -1,12 +1,12 @@
 <?php
 
-namespace Atio\TheFcmChannel;
+namespace Yusef\TheFcmChannel;
 
 /**
  * Class FcmMessage
- * @package Atio\TheFcmChannel
+ * @package Yusef\TheFcmChannel
  */
-class FcmMessage
+class FirebaseMessage
 {
     const PRIORITY_NORMAL = 'normal';
     const PRIORITY_HIGH = 'high';

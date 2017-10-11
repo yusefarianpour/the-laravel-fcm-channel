@@ -1,15 +1,15 @@
 <?php
 
-namespace Atio\TheFcmChannel;
+namespace Yusef\TheFcmChannel;
 
 use GuzzleHttp\Client;
 use Illuminate\Notifications\Notification;
 
 /**
  * Class FcmChannel
- * @package Atio\TheFcmChannel
+ * @package Yusef\TheFcmChannel
  */
-class FcmChannel
+class FirebaseChannel
 {
     /**
      * @const The API URL for Firebase

@@ -17,12 +17,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Atio\\TheChannel\\": "src/"
+            "Yusef\\TheFcmChannel\\": "src/"
         }
     },
     "config": {
         "sort-packages": true
     },
-    "minimum-stability": "dev",
     "prefer-stable": true
 }
