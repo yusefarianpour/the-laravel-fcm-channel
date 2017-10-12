@@ -1,5 +1,5 @@
-# the-fcm-channel
-The Laravel FCM Notification Channel
+# The Laravel FCM Channel
+The Laravel Firebase Cloud Messaging(FCM) Notification Channel
 
 [![Build Status](https://travis-ci.org/yusefarianpour/the-laravel-fcm-channel.svg?branch=master)](https://travis-ci.org/yusefarianpour/the-laravel-fcm-channel)
 
