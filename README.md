@@ -10,35 +10,15 @@ Use this package to send push notifications via Laravel to Firebase Cloud Messag
 This package can be installed through Composer.
 
 ``` bash
-composer require atio/the-fcm-channel
+composer require Yusef/TheFcmChannel
 ```
 
-Once installed, add the service provider:
+Add your Firebase API Key to services.
 
 ```php
-// config/app.php
-'providers' => [
-    ...
-    Atio\The-FCM-Channel\FcmNotificationServiceProvider::class,
-    ...
-];
-```
-
-Publish the config file:
-
-``` bash
-php artisan vendor:publish --provider="Atio\The-FCM-Channel\FcmNotificationServiceProvider"
-```
-
-The following config file will be published in `config/the-fcm-channel.php`. Add your Firebase API Key here.
-
-```php
-return [
-    /*
-     * Add the Firebase API key
-     */
-    'api_key' => ''
-];
+'fcm' => [
+    'key' => 'Your Firebase Cloud Messaging token',
+],
 ```
 
 ## Example Usage
@@ -58,12 +38,17 @@ public function via($notifiable)
 }
 ```
 
-Add the method `public function toFcm($notifiable)` to your notification, and return an instance of `FcmMessage`:
+Add the method `public function toFcm($notifiable)` to your notification, and return an instance of `FirebaseMessage`:
 
 ```php
+use Yusef\TheFcmChannel\FirebaseChannel;
+use Yusef\TheFcmChannel\FirebaseMessage;
+
+...
+
 public function toFcm($notifiable)
 {
-    $message = new yusefarianpour\TheFcmChannel\FcmMessage();
+    $message = new FirebaseMessage();
     $message->content([
         'title'        => 'Foo',
         'body'         => 'Bar',
@@ -72,7 +57,7 @@ public function toFcm($notifiable)
         'click_action' => '' // Optional
     ])->data([
         'param1' => 'baz' // Optional
-    ])->priority(Atio\The-FCM-Channel\FcmMessage::PRIORITY_HIGH); // Optional - Default is 'normal'.
+    ])->priority(FirebaseMessage::PRIORITY_HIGH); // Optional - Default is 'normal'.
 
     return $message;
 }
@@ -82,7 +67,7 @@ When sending to specific device, make sure your notifiable entity has `routeNoti
 
 ```php
 /**
- * Route notifications for the FCM channel.
+ * Route notifications for the Firebase Cloud Messaging channel.
  *
  * @return string
  */
