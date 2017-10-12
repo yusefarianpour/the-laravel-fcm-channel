@@ -10,7 +10,7 @@ Use this package to send push notifications via Laravel to Firebase Cloud Messag
 This package can be installed through Composer.
 
 ``` bash
-composer require Yusef/TheFcmChannel
+composer require yusefarianpour/the-laravel-fcm-channel
 ```
 
 Add your Firebase API Key to services.
