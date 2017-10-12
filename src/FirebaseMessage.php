@@ -12,6 +12,10 @@ class FirebaseMessage
     const PRIORITY_HIGH = 'high';
 
     /**
+     * @var string
+     */
+    private $title;
+    /**
      * @var string|array
      */
     private $to;
@@ -80,6 +84,18 @@ class FirebaseMessage
     public function getTo()
     {
         return $this->to;
+    }
+
+    /**
+     * The FCM notification title.
+     * @param string
+     * @return $this
+     */
+    public function setTitle(String $title)
+    {
+        $this->title = $title;
+
+        return $this;
     }
 
     /**
