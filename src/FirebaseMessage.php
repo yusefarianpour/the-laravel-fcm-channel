@@ -16,6 +16,10 @@ class FirebaseMessage
      */
     private $title;
     /**
+     * @var string
+     */
+    private $body;
+    /**
      * @var string|array
      */
     private $to;
@@ -94,6 +98,18 @@ class FirebaseMessage
     public function setTitle(String $title)
     {
         $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * The FCM notification body.
+     * @param string
+     * @return $this
+     */
+    public function setBody(String $body)
+    {
+        $this->body = $body;
 
         return $this;
     }
