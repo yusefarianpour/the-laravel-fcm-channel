@@ -25,5 +25,12 @@
     "config": {
         "sort-packages": true
     },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "FirebaseMessage": "Yusef\\TheFcmChannel\\FirebaseMessage"
+            }
+        }
+    },
     "prefer-stable": true
 }
