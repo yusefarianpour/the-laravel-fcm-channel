@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Yusef\\TheLaravelFcmChannel\\": "src/"
+            "Yusef\\Channels\\": "src/"
         }
     },
     "config": {

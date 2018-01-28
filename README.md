@@ -48,8 +48,8 @@ public function via($notifiable)
 Add the method `public function toFcm($notifiable)` to your notification, and return an instance of `FirebaseMessage`:
 
 ```php
-use Yusef\TheLaravelFcmChannel\FirebaseChannel;
-use Yusef\TheLaravelFcmChannel\FirebaseMessage;
+use Yusef\Channels\FirebaseChannel;
+use Yusef\Channels\FirebaseMessage;
 
 ...
 
@@ -57,13 +57,14 @@ public function toFcm($notifiable)
 {
     $message = new FirebaseMessage();
 
-    $message->title('Foo')->body('Bar');
+    $message
+        ->title('Foo')  // Required
+        ->body('Bar')   // Required
+        ->sound()   // Optional
+        ->icon()   // Optional
+        ->clickAction();    // Optional
 
-    $message->content([
-        'sound'        => '', // Optional
-        'icon'         => '', // Optional
-        'click_action' => '' // Optional
-    ])->data([
+    $message->data([
         'param1' => 'baz' // Optional
     ])->priority(FirebaseMessage::PRIORITY_HIGH); // Optional - Default is 'normal'.
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Yusef\TheLaravelFcmChannel;
+namespace Yusef\Channels;
 
 use GuzzleHttp\Client;
 use Illuminate\Notifications\Notification;
 
 /**
  * Class FcmChannel
- * @package Yusef\TheFcmChannel
+ * @package Yusef\Channels
  */
 class FirebaseChannel
 {

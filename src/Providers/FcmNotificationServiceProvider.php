@@ -1,13 +1,13 @@
 <?php
 
-namespace Yusef\TheLaravelFcmChannel\Providers;
+namespace Yusef\Channels\Providers;
 
 use Illuminate\Notifications\ChannelManager;
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Class FcmNotificationServiceProvider
- * @package Yusef\TheLaravelFcmChannel\Providers
+ * @package Yusef\Channels\Providers
  */
 class FcmNotificationServiceProvider extends ServiceProvider
 {

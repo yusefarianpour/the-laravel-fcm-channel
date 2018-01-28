@@ -1,10 +1,10 @@
 <?php
 
-namespace Yusef\TheLaravelFcmChannel;
+namespace Yusef\Channels;
 
 /**
  * Class FcmMessage
- * @package Yusef\TheLaravelFcmChannel
+ * @package Yusef\Channels
  */
 class FirebaseMessage
 {
@@ -106,14 +106,23 @@ class FirebaseMessage
         return $this;
     }
 
-    /**
-     * The notification object to send to FCM. `title` and `body` are required.
-     * @param array $params ['sound' => '', 'icon' => '', 'click_action' => '']
-     * @return $this
-     */
-    public function content(array $params)
+    public function sound($sound)
     {
-        $this->notification = $params;
+        $this->notification['sound'] = $sound;
+
+        return $this;
+    }
+
+    public function icon($icon)
+    {
+        $this->notification['icon'] = $icon;
+
+        return $this;
+    }
+
+    public function body($action)
+    {
+        $this->notification['click_action'] = $action;
 
         return $this;
     }
