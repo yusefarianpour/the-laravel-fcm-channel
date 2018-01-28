@@ -106,6 +106,11 @@ class FirebaseMessage
         return $this;
     }
 
+    /**
+     * The FCM notification sound.
+     * @param string
+     * @return $this
+     */
     public function sound($sound = null)
     {
         if ($sound) {
@@ -115,6 +120,11 @@ class FirebaseMessage
         return $this;
     }
 
+    /**
+     * The FCM notification icon.
+     * @param string
+     * @return $this
+     */
     public function icon($icon = null)
     {
         if ($icon) {
@@ -124,7 +134,12 @@ class FirebaseMessage
         return $this;
     }
 
-    public function body($action = null)
+    /**
+     * The FCM notification click action.
+     * @param string
+     * @return $this
+     */
+    public function clickAction($action = null)
     {
         if ($action) {
             $this->notification['click_action'] = $action;
