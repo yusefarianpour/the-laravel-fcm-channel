@@ -1,9 +1,6 @@
 # The Laravel FCM Channel
 The Laravel Firebase Cloud Messaging(FCM) Notification Channel
 
-[![Build Status](https://travis-ci.org/yusefarianpour/the-laravel-fcm-channel.svg?branch=master)](https://travis-ci.org/yusefarianpour/the-laravel-fcm-channel)
-[![Coverage Status](https://coveralls.io/repos/github/yusefarianpour/the-laravel-fcm-channel/badge.svg?branch=master)](https://coveralls.io/github/yusefarianpour/the-laravel-fcm-channel?branch=master)
-
 Use this package to send push notifications via Laravel to Firebase Cloud Messaging. Laravel 5.3+ required.
 
 ## Install
@@ -39,20 +36,30 @@ public function via($notifiable)
 }
 ```
 
+Or :
+
+```php
+public function via($notifiable)
+{
+    return [FirebaseChannel::class];
+}
+```
+
 Add the method `public function toFcm($notifiable)` to your notification, and return an instance of `FirebaseMessage`:
 
 ```php
-use Yusef\TheFcmChannel\FirebaseChannel;
-use Yusef\TheFcmChannel\FirebaseMessage;
+use Yusef\TheLaravelFcmChannel\FirebaseChannel;
+use Yusef\TheLaravelFcmChannel\FirebaseMessage;
 
 ...
 
 public function toFcm($notifiable)
 {
     $message = new FirebaseMessage();
+
+    $message->title('Foo')->body('Bar');
+
     $message->content([
-        'title'        => 'Foo',
-        'body'         => 'Bar',
         'sound'        => '', // Optional
         'icon'         => '', // Optional
         'click_action' => '' // Optional

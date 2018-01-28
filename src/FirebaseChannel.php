@@ -1,6 +1,6 @@
 <?php
 
-namespace Yusef\TheFcmChannel;
+namespace Yusef\TheLaravelFcmChannel;
 
 use GuzzleHttp\Client;
 use Illuminate\Notifications\Notification;

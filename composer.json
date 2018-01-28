@@ -1,6 +1,7 @@
 {
     "name": "yusefarianpour/the-laravel-fcm-channel",
     "description": "The Laravel FCM Channel",
+    "keywords": ["laravel", "firebase", "fcm"],
     "license": "MIT",
     "type": "project",
     "authors": [
@@ -19,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Yusef\\TheFcmChannel\\": "src/"
+            "Yusef\\TheLaravelFcmChannel\\": "src/"
         }
     },
     "config": {

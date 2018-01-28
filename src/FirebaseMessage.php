@@ -1,10 +1,10 @@
 <?php
 
-namespace Yusef\TheFcmChannel;
+namespace Yusef\TheLaravelFcmChannel;
 
 /**
  * Class FcmMessage
- * @package Yusef\TheFcmChannel
+ * @package Yusef\TheLaravelFcmChannel
  */
 class FirebaseMessage
 {
@@ -12,21 +12,13 @@ class FirebaseMessage
     const PRIORITY_HIGH = 'high';
 
     /**
-     * @var string
-     */
-    private $title;
-    /**
-     * @var string
-     */
-    private $body;
-    /**
      * @var string|array
      */
     private $to;
     /**
      * @var array
      */
-    private $notification;
+    private $notification   = [];
     /**
      * @var array
      */
@@ -95,9 +87,9 @@ class FirebaseMessage
      * @param string
      * @return $this
      */
-    public function setTitle(String $title)
+    public function title(String $title)
     {
-        $this->title = $title;
+        $this->notification['title'] = $title;
 
         return $this;
     }
@@ -107,16 +99,16 @@ class FirebaseMessage
      * @param string
      * @return $this
      */
-    public function setBody(String $body)
+    public function body(String $body)
     {
-        $this->body = $body;
+        $this->notification['body'] = $body;
 
         return $this;
     }
 
     /**
      * The notification object to send to FCM. `title` and `body` are required.
-     * @param array $params ['title' => '', 'body' => '', 'sound' => '', 'icon' => '', 'click_action' => '']
+     * @param array $params ['sound' => '', 'icon' => '', 'click_action' => '']
      * @return $this
      */
     public function content(array $params)
@@ -261,8 +253,6 @@ class FirebaseMessage
 
         return $this;
     }
-
-
 
     /**
      * @return string
