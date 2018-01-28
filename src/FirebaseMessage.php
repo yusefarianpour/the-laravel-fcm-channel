@@ -106,23 +106,29 @@ class FirebaseMessage
         return $this;
     }
 
-    public function sound($sound)
+    public function sound($sound = null)
     {
-        $this->notification['sound'] = $sound;
+        if ($sound) {
+            $this->notification['sound'] = $sound;
+        }
 
         return $this;
     }
 
-    public function icon($icon)
+    public function icon($icon = null)
     {
-        $this->notification['icon'] = $icon;
+        if ($icon) {
+            $this->notification['icon'] = $icon;
+        }
 
         return $this;
     }
 
-    public function body($action)
+    public function body($action = null)
     {
-        $this->notification['click_action'] = $action;
+        if ($action) {
+            $this->notification['click_action'] = $action;
+        }
 
         return $this;
     }
