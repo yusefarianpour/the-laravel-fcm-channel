@@ -23,6 +23,13 @@
             "Yusef\\Channels\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yusef\\Channels\\FirebaseServiceProvider"
+            ],
+        }
+    },
     "config": {
         "sort-packages": true
     },
