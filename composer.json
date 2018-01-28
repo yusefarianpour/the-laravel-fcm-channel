@@ -27,7 +27,7 @@
         "laravel": {
             "providers": [
                 "Yusef\\Channels\\FirebaseServiceProvider"
-            ],
+            ]
         }
     },
     "config": {
