@@ -42,6 +42,7 @@ Or :
 use Yusef\Channels\FirebaseChannel;
 
 ...
+
 public function via($notifiable)
 {
     return [FirebaseChannel::class];
