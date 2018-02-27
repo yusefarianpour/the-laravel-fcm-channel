@@ -3,7 +3,7 @@
 namespace Yusef\Channels;
 
 /**
- * Class FcmMessage
+ * Class FirebaseMessage
  * @package Yusef\Channels
  */
 class FirebaseMessage

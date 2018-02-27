@@ -39,6 +39,9 @@ public function via($notifiable)
 Or :
 
 ```php
+use Yusef\Channels\FirebaseChannel;
+
+...
 public function via($notifiable)
 {
     return [FirebaseChannel::class];
@@ -88,4 +91,4 @@ public function routeNotificationForFcm()
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The "The Laravel FCM Channel" is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

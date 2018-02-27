@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 use Illuminate\Notifications\Notification;
 
 /**
- * Class FcmChannel
+ * Class FirebaseChannel
  * @package Yusef\Channels
  */
 class FirebaseChannel
@@ -46,7 +46,7 @@ class FirebaseChannel
             $message->to($to);
         }
 
-        $this->client->post(self::API_URI, [
+        $response   = $this->client->post(self::API_URI, [
             'headers' => [
                 'Authorization' => 'key=' . $this->getApiKey(),
                 'Content-Type'  => 'application/json',
@@ -54,6 +54,7 @@ class FirebaseChannel
             'body' => $message->formatData(),
         ]);
 
+        // dd(json_decode($data)->data, $response->getBody()->getContents());
     }
 
     /**

@@ -6,8 +6,8 @@ use Illuminate\Notifications\ChannelManager;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Class FcmNotificationServiceProvider
- * @package Yusef\Channels\Providers
+ * Class FirebaseServiceProvider
+ * @package Yusef\Channels
  */
 class FirebaseServiceProvider extends ServiceProvider
 {
