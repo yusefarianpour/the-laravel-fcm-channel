@@ -11,7 +11,7 @@ This package can be installed through Composer.
 composer require yusefarianpour/the-laravel-fcm-channel
 ```
 
-Add your Firebase API Key to services.
+Add your Firebase API Key to `config/services.php`
 
 ```php
 'fcm' => [
