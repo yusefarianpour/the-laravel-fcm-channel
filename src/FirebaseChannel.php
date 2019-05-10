@@ -46,15 +46,14 @@ class FirebaseChannel
             $message->to($to);
         }
 
-        $response   = $this->client->post(self::API_URI, [
+        $this->client->request('post', self::API_URI, [
+            'verify' => false,
             'headers' => [
                 'Authorization' => 'key=' . $this->getApiKey(),
                 'Content-Type'  => 'application/json',
             ],
             'body' => $message->formatData(),
         ]);
-
-        // dd(json_decode($data)->data, $response->getBody()->getContents());
     }
 
     /**
