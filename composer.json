@@ -1,5 +1,5 @@
 {
-    "name": "Journalctl/laravel-to-fcm",
+    "name": "journalctl/laravel-to-fcm",
     "description": "Send notification from laravel to firebase cloud messaging.",
     "keywords": ["laravel", "firebase", "fcm", "channel"],
     "license": "MIT",
