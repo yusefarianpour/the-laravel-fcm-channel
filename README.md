@@ -8,7 +8,7 @@ Use this package to send push notifications via Laravel to Firebase Cloud Messag
 This package can be installed through Composer.
 
 ``` bash
-composer require yusefarianpour/the-laravel-fcm-channel
+composer require journalctl/laravel-to-fcm
 ```
 
 Add your Firebase API Key to `config/services.php`
@@ -39,7 +39,7 @@ public function via($notifiable)
 Or :
 
 ```php
-use Yusef\Channels\FirebaseChannel;
+use Journalctl\Channels\FirebaseChannel;
 
 ...
 
@@ -52,8 +52,8 @@ public function via($notifiable)
 Add the method `public function toFcm($notifiable)` to your notification, and return an instance of `FirebaseMessage`:
 
 ```php
-use Yusef\Channels\FirebaseChannel;
-use Yusef\Channels\FirebaseMessage;
+use Journalctl\Channels\FirebaseChannel;
+use Journalctl\Channels\FirebaseMessage;
 
 ...
 
