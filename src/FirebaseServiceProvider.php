@@ -1,13 +1,13 @@
 <?php
 
-namespace Yusef\Channels;
+namespace Journalctl\Channels;
 
 use Illuminate\Notifications\ChannelManager;
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Class FirebaseServiceProvider
- * @package Yusef\Channels
+ * @package Journalctl\Channels
  */
 class FirebaseServiceProvider extends ServiceProvider
 {

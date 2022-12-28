@@ -1,13 +1,13 @@
 <?php
 
-namespace Yusef\Channels;
+namespace Journalctl\Channels;
 
 use GuzzleHttp\Client;
 use Illuminate\Notifications\Notification;
 
 /**
  * Class FirebaseChannel
- * @package Yusef\Channels
+ * @package Journalctl\Channels
  */
 class FirebaseChannel
 {

@@ -1,6 +1,6 @@
 {
-    "name": "yusefarianpour/the-laravel-fcm-channel",
-    "description": "The Laravel FCM Channel",
+    "name": "Journalctl/laravel-to-fcm",
+    "description": "Send notification from laravel to firebase cloud messaging.",
     "keywords": ["laravel", "firebase", "fcm", "channel"],
     "license": "MIT",
     "type": "project",
@@ -16,13 +16,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Yusef\\Channels\\": "src/"
+            "Journalctl\\Channels\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Yusef\\Channels\\FirebaseServiceProvider"
+                "Journalctl\\Channels\\FirebaseServiceProvider"
             ]
         }
     },

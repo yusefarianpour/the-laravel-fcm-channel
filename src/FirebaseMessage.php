@@ -1,10 +1,10 @@
 <?php
 
-namespace Yusef\Channels;
+namespace Journalctl\Channels;
 
 /**
  * Class FirebaseMessage
- * @package Yusef\Channels
+ * @package Journalctl\Channels
  */
 class FirebaseMessage
 {
